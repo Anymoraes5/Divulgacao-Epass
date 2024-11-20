@@ -1,12 +1,151 @@
-.header{
-    background-color: aqua;
+/* Reset de todos os elementos */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.app{
-    background-color: blue;
+
+.header{
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura da página */
+    height: 100px; /* Altura do cabeçalho */
+    background-color: #0097b8; /* Cor de fundo do cabeçalho */
+    color: white;
+    padding: 0 1em; /* Espaçamento interno */
+    display: flex; /* Usando flexbox */
+    align-items: center; /* Alinha verticalmente no centro */
+    justify-content: space-between; /* Alinha o conteúdo da esquerda para a direita */
+    font-size: 22px;
+    font-family: belleza;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+
+}
+nav{
+    display: flex;
+
+}
+.header a{
+    display: flex;
+    margin: 0 1em;
+    font-size: 20px;
+    text-decoration: none;
+    color: aliceblue;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+.app {
+    background-color: #0097b8;
+    height: 700px;
+    
+}
+.texto{
+    color: aliceblue;
+    font-size: 20px;
+    position: absolute;
+    top: 130px;
+    margin: 2em 8em;
+}
+.texto h1{
+    margin-top: 1em;
+    font-size: 50px;
+    text-align: center;
+}
+.texto h2{
+    margin-bottom: 1em;
+}
+.conteudo{
+    top:180px;
+    width: 500px;
+}
+.imagem{
+    position: absolute;
+    top: 1em;
+    left:80%;
+    width: 500px;
+    height: 500px;
+
 }
 .sobre{
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
 }
 .rodape{
     background-color: brown;
+}
+
+/*reponsividade*/
+/* Media Query para telas menores */
+/* Responsividade para tablets */
+@media (max-width: 1300px) {
+    .texto {
+        font-size: 18px;
+        margin: 1.5em 4em;
+    }
+
+    .texto h1 {
+        font-size: 40px;
+    }
+
+    .conteudo {
+        width: 400px;
+    }
+
+    .imagem {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .app {
+        flex-wrap: nowrap; /* Mantém os itens lado a lado */
+        flex-direction: column; /* Para telas muito pequenas, permite quebra vertical */
+    }
+
+    .texto {
+        font-size: 16px;
+        text-align: center; /* Centraliza o texto para telas pequenas */
+        margin: 1em 3.5em;
+    }
+
+    .texto h1 {
+        font-size: 30px;
+    }
+    .conteudo{
+        width: 350px;
+        margin: 0;
+    }
+
+    .imagem {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/* Responsividade para telas muito pequenas (menos de 480px) */
+@media (max-width: 480px) {
+    .texto {
+        font-size: 14px;
+    }
+
+    .texto h1 {
+        font-size: 24px;
+    }
+
+    .imagem {
+        width: 150px;
+        height: 150px;
+    }
 }
