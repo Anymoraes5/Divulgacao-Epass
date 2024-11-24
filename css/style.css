@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Josefin sans;
 }
 
 .header{
@@ -20,7 +21,7 @@
     align-items: center; /* Alinha verticalmente no centro */
     justify-content: space-between; /* Alinha o conteúdo da esquerda para a direita */
     font-size: 22px;
-    font-family: belleza;
+    font-family: Nunito;
     z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 
 }
@@ -36,8 +37,8 @@ nav{
     color: aliceblue;
 }
 .logo{
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 150px;
     margin-left: 30px;
 }
 .app {
@@ -49,11 +50,11 @@ nav{
     color: aliceblue;
     font-size: 20px;
     position: absolute;
-    top: 130px;
+    top: 120px;
     margin: 2em 8em;
 }
 .texto h1{
-    margin-top: 1em;
+    margin-top: 1.4em;
     font-size: 50px;
     text-align: center;
 }
@@ -63,23 +64,108 @@ nav{
 .conteudo{
     top:180px;
     width: 500px;
+    padding: 0;
 }
 .imagem{
     position: absolute;
-    top: 1em;
-    left:80%;
-    width: 500px;
-    height: 500px;
+    padding: 0;
+    top: 5px;
+    left:40em;
+    right: 5%;
+    width: 400px;
+    height: 400px;
 
 }
-.sobre{
-    background-color: rgb(0, 0, 0);
-    color: aliceblue;
+.servicos{
+    padding: auto;
+    background-color: rgb(255, 248, 229);
+    color: #0097b8;
+    height: 730px;
 }
-.avatar{
-    width: 100px;
-    height: 100px;
+.information{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    top: 820px;
+    font-size: 36px;
+    font-style: bold;
 }
+#cell{
+    position: absolute;
+    height: 550px;
+    left: 60%;
+
+}
+.texto-servico{
+    font-style: weight;
+    font-family: poppins;
+    font-weight: 400;
+    position: absolute;
+    left:15%;
+    top: 880px;
+    
+    text-align: justify;
+    text-justify: inter-word; /* Ajusta o espaçamento entre palavras */
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o bloco */
+}
+#botao{
+    position: absolute;
+    top: 1080px;
+    left:15%;
+    width: 150px;
+    align-content: middle;
+
+}
+.btn-icon{
+    vertical-align: middle;
+    position: absolute;
+    top: 8px;
+    right: 35px;
+    width: 15px; /* Largura da imagem */
+    height: 15px; /* Altura da imagem */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Adiciona transição suave */    
+}
+#botao:hover .btn-icon{
+    content: url('Apple_gray_logo-removebg-preview.png'); /* Altera a imagem quando o botão é hover */
+}
+/* sobre */
+    .sobre{
+        padding: auto;
+        background-color:#0097b8 ;
+        color: rgb(255, 248, 229);
+        height: 730px;
+    }
+    .container p{
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+        top: 820px;
+        font-size: 40px;
+        font-style: bold;
+    }
+    .container #TEXT-1{
+        position: absolute;
+        left: 10%;
+    }
+    .sobre-conteudo{
+        height: 200px;
+    }
+    #sobre-img{
+        position: absolute;
+        left: 80%;
+        top: 1670px;
+    }
+    #texto-projeto{
+        position: absolute;
+        left:10%;
+        top:1670px;
+    }
+    .container #text-2{
+        position: absolute;
+        right: 10%;
+    }
+
 .rodape{
     background-color: brown;
 }
